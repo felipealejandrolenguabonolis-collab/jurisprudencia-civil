@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: "0 12 * * *"   # 12:00 UTC = 7:00 a. m. hora Colombia
   workflow_dispatch:        # permite correrlo a mano
+  push:                     # corre solo al guardar este archivo (primera prueba)
+    paths:
+      - ".github/workflows/jurisprudencia-diaria.yml"
 
 permissions:
   contents: write
